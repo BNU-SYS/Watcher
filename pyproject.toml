@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77,<85"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "detector"
+version = "0.0.1"
+description = "Language-neutral detection Skill interfaces and LangGraph workflow"
+readme = "README.md"
+authors = [{name = "BNU-SYS"}]
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.11,<3",
+    "langgraph==1.2.11",
+    "jsonschema>=4.23,<5",
+    "httpx>=0.28,<1",
+]
+
+[project.scripts]
+detector = "detector.cli:main"
+
+[tool.setuptools]
+packages = ["detector"]
+package-dir = { detector = "src/detector" }
+
+[project.urls]
+Repository = "https://gitee.com/bnu-sys/watcher"
+Issues = "https://gitee.com/bnu-sys/watcher/issues"
+Documentation = "https://gitee.com/bnu-sys/watcher/blob/master/README.md"
+
+[tool.setuptools.data-files]
+"share/detector/skills/agent_skill" = ["skills/agent_skill/manifest.json"]
+"share/detector/skills/agent_skill/skill_scanner" = ["skills/agent_skill/skill_scanner/SHORT_SKILL.md", "skills/agent_skill/skill_scanner/SKILL.md"]
+"share/detector/skills/agent_skill/skill_scanner/references" = ["skills/agent_skill/skill_scanner/references/dangerous-code-patterns.md", "skills/agent_skill/skill_scanner/references/permission-analysis.md", "skills/agent_skill/skill_scanner/references/prompt-injection-patterns.md"]
+"share/detector/skills/c" = ["skills/c/SHORT_SKILL.md", "skills/c/SKILL.md", "skills/c/manifest.json"]
+"share/detector/skills/c/rules" = ["skills/c/rules/CWE-125.md", "skills/c/rules/CWE-190.md", "skills/c/rules/CWE-191.md", "skills/c/rules/CWE-197.md", "skills/c/rules/CWE-362.md", "skills/c/rules/CWE-401.md", "skills/c/rules/CWE-476.md", "skills/c/rules/CWE-606.md"]
+"share/detector/skills/java" = ["skills/java/SHORT_SKILL.md", "skills/java/SKILL.md", "skills/java/manifest.json"]
+"share/detector/skills/java/rules" = ["skills/java/rules/CWE-20.md", "skills/java/rules/CWE-22.md", "skills/java/rules/CWE-352.md", "skills/java/rules/CWE-369.md", "skills/java/rules/CWE-434.md", "skills/java/rules/CWE-476.md", "skills/java/rules/CWE-502.md", "skills/java/rules/CWE-611.md", "skills/java/rules/CWE-772.md", "skills/java/rules/CWE-78.md", "skills/java/rules/CWE-787.md", "skills/java/rules/CWE-79.md", "skills/java/rules/CWE-835.md", "skills/java/rules/CWE-862.md", "skills/java/rules/CWE-89.md", "skills/java/rules/CWE-918.md", "skills/java/rules/CWE-94.md"]
+"share/detector/skills/php" = ["skills/php/SHORT_SKILL.md", "skills/php/SKILL.md", "skills/php/manifest.json"]
+"share/detector/skills/php/rules" = ["skills/php/rules/CWE-22.md", "skills/php/rules/CWE-352.md", "skills/php/rules/CWE-434.md", "skills/php/rules/CWE-470.md", "skills/php/rules/CWE-502.md", "skills/php/rules/CWE-78.md", "skills/php/rules/CWE-79.md", "skills/php/rules/CWE-862.md", "skills/php/rules/CWE-89.md", "skills/php/rules/CWE-918.md", "skills/php/rules/CWE-94.md", "skills/php/rules/CWE-98.md"]
+"share/detector/skills/python" = ["skills/python/SHORT_SKILL.md", "skills/python/SKILL.md", "skills/python/manifest.json"]
+"share/detector/skills/python/rules" = ["skills/python/rules/CWE-190.md", "skills/python/rules/CWE-22.md", "skills/python/rules/CWE-295.md", "skills/python/rules/CWE-400.md", "skills/python/rules/CWE-502.md", "skills/python/rules/CWE-611.md", "skills/python/rules/CWE-78.md", "skills/python/rules/CWE-798.md", "skills/python/rules/CWE-89.md", "skills/python/rules/CWE-95.md"]

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "id": "c.defect-check",
+  "version": "0.1.0",
+  "description": "Source-only C/C++ defect review",
+  "owner": "C/C++ Detection Submodule Maintainer",
+  "languages": [
+    "c"
+  ],
+  "defect_types": [
+    "CWE-125",
+    "CWE-476",
+    "CWE-401",
+    "CWE-606",
+    "CWE-197",
+    "CWE-362",
+    "CWE-190",
+    "CWE-191"
+  ],
+  "skill_file": "SKILL.md",
+  "rule_files": {
+    "CWE-125": "rules/CWE-125.md",
+    "CWE-476": "rules/CWE-476.md",
+    "CWE-401": "rules/CWE-401.md",
+    "CWE-606": "rules/CWE-606.md",
+    "CWE-197": "rules/CWE-197.md",
+    "CWE-362": "rules/CWE-362.md",
+    "CWE-190": "rules/CWE-190.md",
+    "CWE-191": "rules/CWE-191.md"
+  },
+  "file_extensions": {
+    "c": [
+      ".c",
+      ".cpp",
+      ".cc",
+      ".cxx",
+      ".C",
+      ".h",
+      ".hpp",
+      ".hh",
+      ".hxx"
+    ]
+  }
+}

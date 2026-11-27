@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "id": "python.defect-check",
+  "version": "0.3.1",
+  "description": "Source-only Python defect review for injection, deserialization, path traversal, resource exhaustion, integer overflow, hardcoded credentials, certificate validation and XML external entities",
+  "owner": "Python Detection Submodule Maintainer",
+  "languages": [
+    "python"
+  ],
+  "defect_types": [
+    "CWE-89",
+    "CWE-22",
+    "CWE-78",
+    "CWE-95",
+    "CWE-502",
+    "CWE-190",
+    "CWE-400",
+    "CWE-798",
+    "CWE-295",
+    "CWE-611"
+  ],
+  "skill_file": "SKILL.md",
+  "rule_files": [
+    "rules/CWE-89.md",
+    "rules/CWE-22.md",
+    "rules/CWE-78.md",
+    "rules/CWE-95.md",
+    "rules/CWE-502.md",
+    "rules/CWE-190.md",
+    "rules/CWE-400.md",
+    "rules/CWE-798.md",
+    "rules/CWE-295.md",
+    "rules/CWE-611.md"
+  ],
+  "file_extensions": {
+    "python": [
+      ".py",
+      ".pyi"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "agent-skill.security-review",
+  "version": "0.1.0",
+  "description": "LLM-based security review of Agent Skill ",
+  "owner": "ICodeDetector maintainers",
+  "languages": [
+    "agent_skill"
+  ],
+  "defect_types": [
+    "Prompt Injection",
+    "Malicious Code",
+    "Excessive Permissions",
+    "Secret Exposure",
+    "Supply Chain",
+    "Validation"
+  ],
+  "skill_file": "skill_scanner/SKILL.md",
+  "rule_files": [
+    "skill_scanner/references/prompt-injection-patterns.md",
+    "skill_scanner/references/dangerous-code-patterns.md",
+    "skill_scanner/references/permission-analysis.md"
+  ],
+  "file_extensions":{},
+  "exclude_dir": [
+    ".git",
+    "__pycache__",
+    "node_modules",
+    ".venv",
+    "venv",
+    "dist",
+    "build"
+  ],
+  "exclude_file": [
+    ".pyc",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".ico",
+    ".woff",
+    ".woff2",
+    ".ttf",
+    ".otf",
+    ".zip",
+    ".tar",
+    ".gz",
+    ".so",
+    ".dylib",
+    ".dll",
+    ".exe"
+  ]
+}

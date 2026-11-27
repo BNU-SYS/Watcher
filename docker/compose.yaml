@@ -1,0 +1,24 @@
+name: watcher
+
+services:
+  web:
+    image: ${WATCHER_IMAGE:-watcher:0.0.1-web}
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${WATCHER_BIND:-127.0.0.1}:${WATCHER_PORT:-18080}:8000"
+    environment:
+      WATCHER_MAX_CONCURRENT_SCANS: "${WATCHER_MAX_CONCURRENT_SCANS:-1}"
+    volumes:
+      - data:/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    stop_grace_period: 30s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
